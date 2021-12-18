@@ -1,0 +1,49 @@
+{
+  "name": "anomalyce/atomic",
+  "description": "A Laravel and Inertia.js adapter layer for Atomic.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    { "name": "Anomalyce" }
+  ],
+  "require": {
+    "php": ">=8.1.1",
+    "fruitcake/laravel-cors": "^2.0.4",
+    "fideloper/proxy": "^4.4.1",
+    "laravel/framework": "^8.76.2",
+    "laravel/tinker": "^2.6.3",
+    "tightenco/ziggy": "^1.4.2",
+    "inertiajs/inertia-laravel": "^0.4.5"
+  },
+  "require-dev": {
+    "php": ">=8.1.1",
+    "facade/ignition": "~2.17",
+    "nunomaduro/collision": "~5.10",
+    "fakerphp/faker": "~1.17",
+    "mockery/mockery": "~1.4",
+    "pestphp/pest": "~1.21",
+    "pestphp/pest-plugin-laravel": "~1.1"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "Anomalyce\\Atomic\\Adapter\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Anomalyce\\Atomic\\Adapter\\AdapterServiceProvider"
+      ]
+    }
+  }
+}
