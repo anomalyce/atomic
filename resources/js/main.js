@@ -12,13 +12,7 @@ export function createAtomicApp (options) {
 
   // Inertia.js Setup.
   let inertia = options.inertia(atomic);
-
-  if (! inertia?.resolveUsing) {
-    throw new Error('The Atomic app requires an Inertia.js resolver.');
-  }
-
-  atomic.resolve = inertia.resolveUsing;
-
+  
   if (inertia?.progress) {
     InertiaProgress.init(inertia.progress);
   }

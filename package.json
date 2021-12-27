@@ -1,7 +1,7 @@
 {
   "name": "@anomalyce/atomic",
   "main": "resources/js/main.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Anomalyce",
   "repository": {
@@ -9,9 +9,9 @@
     "url": "git+https://github.com/anomalyce/atomic.git"
   },
   "dependencies": {
-    "@inertiajs/inertia": "^0.10.1",
-    "@inertiajs/inertia-vue3": "^0.5.2",
-    "@inertiajs/progress": "^0.2.6",
-    "vue": "^3.2.16"
+    "@inertiajs/inertia": "~0.10",
+    "@inertiajs/inertia-vue3": "~0.5",
+    "@inertiajs/progress": "~0.2.6",
+    "vue": "~3.2"
   }
 }
