@@ -64,8 +64,12 @@ export function createAtomicApp (options) {
      * Create the Vue application.
      */
     setup ({ el, App, props, plugin }) {
-      const app = createApp(() => {
-        return h(App, props);
+      const app = createApp({
+        setup () {
+          components.forEach(component => typeof component?.setup === 'function' && component.setup());
+
+          return () => h(App, props);
+        },
       });
 
       app.use(plugin);
