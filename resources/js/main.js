@@ -2,13 +2,10 @@ import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 
+export { useTemplate } from './template-manager.js';
+
 export function createAtomicApp (options) {
   let atomic = window.Atomic;
-
-  // Tailwindcss Setup.
-  // options.tailwind
-
-
 
   // Inertia.js Setup.
   let inertia = options.inertia(atomic);
@@ -17,12 +14,8 @@ export function createAtomicApp (options) {
     InertiaProgress.init(inertia.progress);
   }
 
-
-
   // Atomic Setup.
   const components = options.components(atomic);
-
-
 
   /**
    * Create the Inertia.js application.
