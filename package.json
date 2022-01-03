@@ -1,7 +1,7 @@
 {
   "name": "@anomalyce/atomic",
   "main": "resources/js/main.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "author": "Anomalyce",
   "repository": {

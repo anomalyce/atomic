@@ -66,6 +66,15 @@ export function createAtomicApp (options) {
       });
 
       app.use(plugin);
+
+      if (options?.store !== undefined) {
+        app.use(options.store);
+      }
+
+      if (typeof options?.plugins === 'function') {
+        options.plugins(app);
+      }
+
       app.mount(el);
     },
     
