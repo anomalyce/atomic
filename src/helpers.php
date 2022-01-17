@@ -22,6 +22,8 @@ if (! function_exists('atomic'))
 
     Inertia::setRootView('core::inertia');
 
-    return Inertia::render(compact('component', 'template'), $data);
+    $view = implode(DIRECTORY_SEPARATOR, compact('component', 'template'));
+
+    return Inertia::render($view, $data);
   }
 }
