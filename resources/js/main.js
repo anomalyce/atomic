@@ -25,7 +25,11 @@ export function createAtomicApp (options) {
     /**
      * Resolve the Inertia.js templates.
      */
-    resolve ({ component, template }) {
+    resolve (view) {
+      const index = view.indexOf('/');
+      const component = view.substr(0, index);
+      const template = view.substr(index + 1);
+
       const resolver = components.find(c => c.name === component);
 
       if (! resolver) {
